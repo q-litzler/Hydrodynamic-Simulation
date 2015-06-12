@@ -100,7 +100,7 @@ class Water: public AModule {
 Water::Water(Model & model): AModule(model)
 ```
 
-This architecture proves very useful in the *View* class, where the actual construction of our OpenGL object operates. Building upon the similarity of every object, we use our abstract class *AModule* to manage our OpenGL buffers and state machine uniformly.
+This architecture proves very useful in the *View* class, where the actual construction of our OpenGL object takes place. Building upon the similarity of every object, we use our abstract class *AModule* to manage our OpenGL buffers and state machine uniformly.
 
 ```
 class GLObject
