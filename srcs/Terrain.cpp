@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 09:57:36 by p                 #+#    #+#             */
-/*   Updated: 2015/06/11 19:36:36 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:19:13 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Terrain::Terrain(Model & model) : AModule(model)
 	this->createVertices();
 	this->inverseWeightedDistance();
 	this->createColors();
-	this->calculateNormals();
+	this->createNormals();
 	this->createElements();
 	return;
 }
@@ -79,7 +79,7 @@ void				Terrain::inverseWeightedDistance(void)
 	}
 }
 
-void				Terrain::calculateNormals(void)
+void				Terrain::createNormals(void)
 {
 	glm::vec3	normal, a, b, c;
 	GLuint		stride = this->_model._vertexCol * DIMENSIONS;
