@@ -4,10 +4,14 @@ MOD1 is an hydrodynamic simulation written in C++ and using OpenGL. It parses a 
 
 #Source tree
 
-`incs/` contains header files related to libraries (GL, GLM, GLFW) and source files
-`lib/` contains GLEW and GLFW3 static libraries
-`srcs/` contains the C++ source code
-`maps/` contains a set of maps used by the programm
+`incs/`
+Contains header files related to libraries (GL, GLM, GLFW) and source files.
+`lib/`
+Contains GLEW and GLFW3 static libraries.
+`srcs/`
+Contains the C++ source code.
+`maps/`
+Contains a set of maps used by the programm.
 
 #Configuration
 
