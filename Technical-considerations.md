@@ -6,9 +6,9 @@ We will not discuss every aspect of the source code, but rather focus on what's 
 
 #Architecture
 
-*Friend or foe?*
+**Friend or foe?**
 
-This programm revolves around a simply *Model* / *View* couple.
+This programm revolves around a simple *Model* / *View* couple.
 The *Model* class is in charge of building every elements needed by the View class in order to display the simulation.
 To keep our files clean and of reasonable length, we chose to divide our *Model* into multiple classes, each one
 being a component of the scene we are trying to render.
@@ -29,7 +29,7 @@ Each of the following classes needs its own buffers, hence the separation:
 - WaterBorders
 - Drop
 
-Diving the *Model* into smaller entities makes sense on many level, but causes one problem we still have to solve:
+Dividing the *Model* into smaller entities makes sense on many level, but causes one problem we still have to solve:
 The *Model* class stores a numbers of private attributes, initialized by the parser class or precomputed.
 These attributes needs to be accessed by all the sub-divided classes, preferably without getters as it would be
 too cumbersome.
@@ -54,10 +54,12 @@ Using friend class is justified by the fact that each sub-divided classes are mo
 
 `GLuint		backwards = this->_model._col;`
 
-*A module to rule them all*
+for example.
+
+**A module to rule them all**
 
 As stated before, each component of the *Model* has a number of similar attributes and member functions in order to
-manage the buffers that will later be used by OpenGL in our *View* class. This is a great opportunity to create a parent abstract class providing the necessary tools for its children to grow into productive members of our software.
+manage the buffers that will later be used by OpenGL in our *View* class. This is a great opportunity to create a parent abstract class providing the necessary tools for its children to grow into fully productive members of our ~~society~~ software.
 
 ```
 class AModule
@@ -137,9 +139,14 @@ Making our OpenGL objects easy to use in our rendering loop:
 ```
 Terrain *		terrain = this->_model.getTerrain();
 GLObject		GLTerrain(*terrain, *this->_shader);
+
 while (!glfwWindowShouldClose(this->_window))
 {
 	GLTerrain.setTerrainState();
 	glDrawElements(GL_TRIANGLE_STRIP, terrain->getElementsSize(), GL_UNSIGNED_INT, 0);
 }
 ```
+
+#Algorithms and optimization
+
+
