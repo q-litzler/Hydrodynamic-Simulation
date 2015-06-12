@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/09 22:47:17 by p                 #+#    #+#             */
-/*   Updated: 2015/06/11 19:00:37 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:18:14 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class WaterBorders : public AModule
 		void			createVertices(void);
 		void			createColors(void);
 		void			createElements(void);
-		void			calculateNormals(void);
+		void			createNormals(void);
 
 		GLfloat			_waterBordersTop;
 		GLfloat *		_terrainVertices;

@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/05 15:01:46 by qlitzler          #+#    #+#             */
-/*   Updated: 2015/06/11 19:34:35 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:17:55 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Borders::Borders(Model & model): AModule(model), _bordersTop(0)
 	this->_colorsSize = this->_elementsSize * COLOR_CHANNELS;
 	this->_terrainVertices = this->_model._terrain->getVertices();
 	this->_thickness = this->_model._bottom - this->_model._top / 10.0f;
-	this->calculateNormals();
+	this->createNormals();
 	this->createVertices();
 	this->createColors();
 	return;
@@ -102,7 +102,7 @@ void			Borders::createVertices(void)
 	}
 }
 
-void			Borders::calculateNormals(void)
+void			Borders::createNormals(void)
 {
 	int	index  = 0;
 

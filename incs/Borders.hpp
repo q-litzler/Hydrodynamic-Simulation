@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Borders.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: p <p@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/05 15:02:20 by qlitzler          #+#    #+#             */
-/*   Updated: 2015/06/07 21:51:22 by p                ###   ########.fr       */
+/*   Updated: 2015/06/12 17:18:07 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Borders: public AModule
 		void			createVertices(void);
 		void			createColors(void);
 		void			createElements(void);
-		void			calculateNormals(void);
+		void			createNormals(void);
 
 		GLfloat			_bordersTop;
 		GLfloat *		_terrainVertices;

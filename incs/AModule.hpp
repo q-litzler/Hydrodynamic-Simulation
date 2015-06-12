@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AModule.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: p <p@student.42.fr>                        +#+  +:+       +#+        */
+/*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/02 18:36:15 by qlitzler          #+#    #+#             */
-/*   Updated: 2015/06/05 13:15:25 by p                ###   ########.fr       */
+/*   Updated: 2015/06/12 17:16:46 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class AModule
 		virtual void		createVertices(void) = 0;
 		virtual void		createElements(void) = 0;
 		virtual void		createColors(void) = 0;
+		virtual void		createNormals(void) = 0;
 
 	protected:
 		Model &				_model;

@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/09 22:48:25 by p                 #+#    #+#             */
-/*   Updated: 2015/06/11 19:37:37 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:18:36 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,11 @@ void			WaterBorders::createColors(void)
 }
 
 void			WaterBorders::createElements(void)
+{
+	
+}
+
+void			WaterBorders::createNormals(void)
 {
 	
 }

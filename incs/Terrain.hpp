@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/21 09:56:50 by p                 #+#    #+#             */
-/*   Updated: 2015/06/02 21:22:10 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:18:52 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Terrain: public AModule
 		Terrain(Terrain const & model);
 		Terrain &		operator=(Terrain const & rhs);
 		void			inverseWeightedDistance(void);
-		void			calculateNormals(void);
+		void			createNormals(void);
 		void			createVertices(void);
 		void			createElements(void);
 		void			createColors(void);
