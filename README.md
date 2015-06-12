@@ -1,6 +1,6 @@
-#MOD1
+#Hydrodynamic Simulation
 
-MOD1 is an hydrodynamic simulation written in C++ and using OpenGL. It parses a .mod1 map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
+HDS is an hydrodynamic simulator written in C++ and using OpenGL. It parses a .mod1 map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
 
 #Source tree
 
@@ -61,7 +61,7 @@ Calls *make fclean* and *make all*.
 
 **Start the programm**
 
-`./mod1 scenario maps`
+`./hds scenario maps`
 
 **Available scenarios:**
 
@@ -82,7 +82,7 @@ Specify a path to a map file.
 
 #Create map file
 
-Map file should end with *.mod1* extension and should have the following format:
+Map file should end with *.hds* extension and should have the following format:
 
 *Resolution*
 
