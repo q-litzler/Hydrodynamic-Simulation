@@ -78,9 +78,11 @@ Calls *make fclean* and *make all*.
 
 **Maps**
 
-Specify a path to a map file. Map file should end with .mod1 extension and should have the following format:
+Specify a path to a map file.
 
 #Create map file
+
+Map file should end with *.mod1* extension and should have the following format:
 
 *Resolution*
 
