@@ -2,7 +2,7 @@
 
 In this file, we will discuss algorithmic and architecural choices we made for this hydrodynamic simulation.
 We will assume a general knowledge of OOP, C/C++ language and OpenGL of our readers.
-We will not discuss every aspect of the source code, but rather focus on what's interesting in our eyes.
+We will not discuss every aspect of the source code, but rather focus on what's interesting to us.
 
 #Architecture
 
