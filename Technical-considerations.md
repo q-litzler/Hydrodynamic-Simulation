@@ -78,6 +78,7 @@ class AModule
 		virtual void		createVertices(void) = 0;
 		virtual void		createElements(void) = 0;
 		virtual void		createColors(void) = 0;
+		virtual void		createNormals(void) = 0;
 
 	protected:
 		Model &			_model;
