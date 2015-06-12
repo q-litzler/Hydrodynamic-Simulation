@@ -50,7 +50,7 @@ class Model
 
 Using friend class is justified by the fact that each sub-divided classes are more than just a part of the *Model* class, they ARE the model. Friend classes allow us to horizontally share attributes accross each component of the *Model* in a seamless way:
 
-*incs/Terrain.hpp*
+*incs/Terrain.cpp*
 
 `GLuint		backwards = this->_model._col;`
 
