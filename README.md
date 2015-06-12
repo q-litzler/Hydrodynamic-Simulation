@@ -18,9 +18,9 @@ Contains a set of maps used by the programm.
 
 #Configuration
 
-`OpenGL 3.3` or greater is required for this project to run. It is currently set up to use OpenGL 4.1, but you can always change it to match your hardware by editing the following lines:
+*OpenGL 3.3* or greater is required for this project to run. It is currently set up to use OpenGL 4.1, but you can always change it to match your hardware by editing the following lines:
 
-`incs/Define.hpp`
+*incs/Define.hpp*
 
 ```
 # define GL_MAJOR					4
@@ -31,7 +31,7 @@ This programm was tested solely on `OSX` machines, but should be compatible with
 
 Depending on your graphical hardware, you might experience slowdowns when using the "rain" scenario. Decrease or increase the numbers of instances editing this line:
 
-`incs/Define.hpp`
+*incs/Define.hpp*
 
 ```
 # define MAX_INSTANCES				17000
@@ -59,7 +59,7 @@ Calls *make clean* and delete binary files.
 
 Calls *make fclean* and *make all*.
 
-To execute the binary:
+**Start the programm**
 
 `./mod1 scenario maps`
 
@@ -76,18 +76,21 @@ To execute the binary:
 `tsunami`: A giant wave crashes the scene.
 
 
-#Maps
+**Maps**
+
 Specify a path to a map file. Map file should end with .mod1 extension and should have the following format:
 
-**Resolution**
+#Create map file
+
+*Resolution*
 
 `width:<100:2560> height:<100:1440>`
 
-**Grid**
+*Grid*
 
 `col:<20:3000> row:<20:3000>`
 
-**Height Map**
+*Height Map*
 
 `x:<0:col> y:<0:> z:<0:row>`
 
