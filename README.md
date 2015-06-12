@@ -1,6 +1,6 @@
 #MOD1
 
-MOD1 is an hydrodynamic simulation written in C++ and using OpenGL. It parses a .mod1 map file to interpolate a relief on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
+MOD1 is an hydrodynamic simulation written in C++ and using OpenGL. It parses a .mod1 map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
 
 #Source tree
 
