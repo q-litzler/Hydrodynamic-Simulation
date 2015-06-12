@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/24 22:47:57 by p                 #+#    #+#             */
-/*   Updated: 2015/06/10 21:54:23 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:30:16 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ invalidFileExtensionException::invalidFileExtensionException(void) : MODExceptio
 
 char const *	invalidFileExtensionException::what(void) const throw()
 {
-	return "file must have .mod1 extension";
+	return "file must have .hds extension";
 }
 
 /*******************************************

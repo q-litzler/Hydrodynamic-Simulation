@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbroggi <pbroggi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/12 16:38:56 by pbroggi           #+#    #+#             */
-/*   Updated: 2015/06/11 18:32:20 by pbroggi          ###   ########.fr       */
+/*   Updated: 2015/06/12 17:30:29 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ static void 		exceptionsHandler(std::exception & e)
 {
 	if (typeid(e) == typeid(std::ifstream::failure))
 	{
-		std::cerr << RED << "MOD1 error: " << std::strerror(errno) << WHITE << std::endl;
+		std::cerr << RED << "HDS error: " << std::strerror(errno) << WHITE << std::endl;
 	}
 	else
 	{
-		std::cerr << RED << "MOD1 error: " << e.what() << WHITE << std::endl;
+		std::cerr << RED << "HDS error: " << e.what() << WHITE << std::endl;
 	}
 }
 
@@ -34,7 +34,7 @@ int					main(int argc, char **argv)
 {
 	if (argc != 3)
 	{
-		std::cerr << "Usage:\t./mod1 <scenario> <map>" << std::endl
+		std::cerr << "Usage:\t./hds <scenario> <map>" << std::endl
 		<< "\t- Available scenarios: flood, rain, waves, drain, tsunami" << std::endl;
 		return -1;
 	}

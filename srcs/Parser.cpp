@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/13 18:13:39 by qlitzler          #+#    #+#             */
-/*   Updated: 2015/06/12 14:48:27 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/12 17:30:42 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void			Parser::checkScenario(char const *scenario)
 void			Parser::checkPath(char const *path)
 {
 	std::ifstream		file;
-	std::string const	pattern = ".*\\.mod1$";
+	std::string const	pattern = ".*\\.hds$";
 	
 	this->_file.exceptions(std::ifstream::failbit | std::ifstream::badbit);
 	this->_file.open(path);

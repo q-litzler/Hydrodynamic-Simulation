@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: p <p@student.42.fr>                        +#+  +:+       +#+         #
+#    By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/05/12 23:33:03 by p                 #+#    #+#              #
-#    Updated: 2015/06/09 23:51:15 by p                ###   ########.fr        #
+#    Updated: 2015/06/12 17:29:46 by qlitzler         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mod1
+NAME = hds
 # Compilation settings
 CC = clang++
 CFLAGS = -Werror -Wextra -Wall -O3
