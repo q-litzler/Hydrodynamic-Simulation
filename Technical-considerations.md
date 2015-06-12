@@ -1,4 +1,4 @@
-#Intro
+#Introduction
 
 In this file, we will discuss algorithmic and architecural choices we made for this hydrodynamic simulation.
 We will assume a general knowledge of OOP, C/C++ language and OpenGL of our readers.
@@ -46,5 +46,7 @@ class Model
 }
 ```
 
-Using friend class has to be justified
+Using friend class is justified by the fact that each sub-divided classes are more than just a part of the Model class, they ARE the model. Friend classes allow us to horizontally share attributes accross each component of the model in a seamless way:
 
+'incs/Terrain.hpp
+`GLuint		backwards = this->_model._col;'
