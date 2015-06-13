@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Water.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pbroggi <pbroggi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/04 15:29:11 by qlitzler          #+#    #+#             */
-/*   Updated: 2015/06/11 18:39:33 by pbroggi          ###   ########.fr       */
+/*   Updated: 2015/06/13 16:01:50 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,7 +193,7 @@ void			Water::distributeGo(int adjacent[], GLuint skip[], GLuint pos, int flag)
 					dest = tmp;
 					min = this->_vertices[tmp + 1];
 				}
-				if (this->_vertices[tmp + 1] > max)
+				else if (this->_vertices[tmp + 1] > max)
 				{
 					src = tmp;
 					max = this->_vertices[tmp + 1];
