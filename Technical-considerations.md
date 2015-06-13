@@ -214,17 +214,17 @@ Elements size:
 
 ```
 Number of elements * sizeof(unsigned int)
-(22 * 32) = 704 bits
+(22 * 4) = 88 bytes
 ```
 
 Vertices size:
 
 ```
 Number of vertices * Dimensions (x, y, z) * sizeof(float)
-(15 * 3 * 32) = 1440 bits
+(15 * 3 * 4) = 180 bytes
 ```
 
-For a total of 2144 bits
+For a total of 268 bytes
 
 If we drew the same grid using *GL_TRIANGLES* and no elements (meaning we would have to specify each vertices for each triangle), we get:
 
@@ -232,11 +232,7 @@ Vertices size:
 
 ```
 Number of triangles * Vertices in triangle * Dimensions (x, y, z) * sizeof(float)
-(18 * 3 * 3 * 32) = 5184 bits
+(18 * 3 * 3 * 4) = 648 bytes
 ```
 
 That's a whopping 58% reduction in memory usage. Not too shabby !
-
-
-
-
