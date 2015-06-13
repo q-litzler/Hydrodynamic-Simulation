@@ -4,42 +4,21 @@
 
 HDS is an hydrodynamic simulator written in C++ and using OpenGL. It parses a .mod1 map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
 
-#Source tree
+#Commands
 
-`incs/`
-Contains header files related to libraries (GL, GLM, GLFW) and source files.
+During the simulation, if the scenario is not `rain`, you can press the following keys:
 
-`lib/`
-Contains GLEW and GLFW3 static libraries.
+`arrow keys`: change the angle of the camera
 
-`srcs/`
-Contains the C++ source code.
+`+`: zoom in
 
-`maps/`
-Contains a set of maps used by the programm.
+`-` zoom out
 
-#Configuration
+`v`: start draining the water out of the scene
 
-*OpenGL 3.3* or greater is required for this project to run. It is currently set up to use OpenGL 4.1, but you can always change it to match your hardware by editing the following lines:
+`f`: restart the simulation as a 'flood' scenario
 
-*incs/Define.hpp*
-
-```
-# define GL_MAJOR					4
-# define GL_MINOR					1
-```
-
-This programm was tested solely on `OSX` machines, but should be compatible with `UNIX` operating systems. You can always contact us for support, but keep in mind that this piece of software was not designed with cross-platform compatiblity as a requirement.
-
-Depending on your graphical hardware, you might experience slowdowns when using the "rain" scenario. Decrease or increase the numbers of instances editing this line:
-
-*incs/Define.hpp*
-
-```
-# define MAX_INSTANCES				17000
-```
-
-Recent graphical hardwares can handle up to millions of instances.
+`w`: trigger a wave
 
 #Usage
 
@@ -101,6 +80,43 @@ Map file should end with *.hds* extension and should have the following format:
 You can add as many height points as you like. As we work in a three dimensional space, the y coordinate indicates the actual height.
 
 Feel free to create your own map and to share it on this github repository.
+
+#Source tree
+
+`incs/`
+Contains header files related to libraries (GL, GLM, GLFW) and source files.
+
+`lib/`
+Contains GLEW and GLFW3 static libraries.
+
+`srcs/`
+Contains the C++ source code.
+
+`maps/`
+Contains a set of maps used by the programm.
+
+#Configuration
+
+*OpenGL 3.3* or greater is required for this project to run. It is currently set up to use OpenGL 4.1, but you can always change it to match your hardware by editing the following lines:
+
+*incs/Define.hpp*
+
+```
+# define GL_MAJOR					4
+# define GL_MINOR					1
+```
+
+This programm was tested solely on `OSX` machines, but should be compatible with `UNIX` operating systems. You can always contact us for support, but keep in mind that this piece of software was not designed with cross-platform compatiblity as a requirement.
+
+Depending on your graphical hardware, you might experience slowdowns when using the "rain" scenario. Decrease or increase the numbers of instances editing this line:
+
+*incs/Define.hpp*
+
+```
+# define MAX_INSTANCES				17000
+```
+
+Recent graphical hardwares can handle up to millions of instances.
 
 #Licence:
 
