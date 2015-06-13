@@ -235,7 +235,7 @@ Number of triangles * Vertices in triangle * Dimensions (x, y, z) * sizeof(float
 (18 * 3 * 3 * 32) = 5184 bits
 ```
 
-That's a whopping 58% reduction in ressources. Not bad.
+That's a whopping 58% reduction in memory usage. Not too shabby !
 
 
 
