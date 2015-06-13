@@ -6,7 +6,7 @@
 /*   By: qlitzler <qlitzler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/04 15:29:11 by qlitzler          #+#    #+#             */
-/*   Updated: 2015/06/13 16:01:50 by qlitzler         ###   ########.fr       */
+/*   Updated: 2015/06/13 21:48:59 by qlitzler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,8 @@ void			Water::assignWaterLevel(GLfloat water, GLuint start, GLuint end, GLuint s
 	for (GLuint i = start; i < end; i += step)
 	{
 		if (this->_vertices[i + 1] > this->_model._bottom
-			&& this->_vertices[i + 1] < this->_floodTop)
+			&& (this->_vertices[i + 1] < this->_floodTop
+			|| water < 0 ))
 		{
 			this->_vertices[i + 1] += water;
 		}
