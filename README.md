@@ -2,7 +2,7 @@
 
 ![](screenshots/crater%20flood.png)
 
-HDS is an hydrodynamic simulator written in C++ and using OpenGL. It parses a .mod1 map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
+HDS is an hydrodynamic simulator written in C++ and using OpenGL. It parses a `.hds` map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
 
 #Commands
 
