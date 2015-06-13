@@ -4,6 +4,29 @@
 
 HDS is an hydrodynamic simulator written in C++ and using OpenGL. It parses a `.hds` map file to interpolate a landscape on which water will flow in different scenarios. This project was written within the context of undergraduate studies in computer science over the course of three weeks, by a team of two.
 
+#Configuration
+
+*OpenGL 3.3* or greater is required for this project to run. It is currently set up to use *OpenGL 4.1*, but you can always change it to match your hardware by editing the following lines:
+
+*incs/Define.hpp*
+
+```
+# define GL_MAJOR					4
+# define GL_MINOR					1
+```
+
+This programm was tested solely on `OSX` machines, but should be compatible with `UNIX` operating systems. You can always contact us for support, but keep in mind that this piece of software was not designed with cross-platform compatiblity as a requirement.
+
+Depending on your graphical hardware, you might experience slowdowns when using the "rain" scenario. Decrease or increase the numbers of instances editing this line:
+
+*incs/Define.hpp*
+
+```
+# define MAX_INSTANCES				17000
+```
+
+Recent graphical hardwares can handle up to millions of instances.
+
 #Commands
 
 During the simulation, if the scenario is not `rain`, you can press the following keys:
@@ -94,29 +117,6 @@ Contains the C++ source code.
 
 `maps/`
 Contains a set of maps used by the programm.
-
-#Configuration
-
-*OpenGL 3.3* or greater is required for this project to run. It is currently set up to use OpenGL 4.1, but you can always change it to match your hardware by editing the following lines:
-
-*incs/Define.hpp*
-
-```
-# define GL_MAJOR					4
-# define GL_MINOR					1
-```
-
-This programm was tested solely on `OSX` machines, but should be compatible with `UNIX` operating systems. You can always contact us for support, but keep in mind that this piece of software was not designed with cross-platform compatiblity as a requirement.
-
-Depending on your graphical hardware, you might experience slowdowns when using the "rain" scenario. Decrease or increase the numbers of instances editing this line:
-
-*incs/Define.hpp*
-
-```
-# define MAX_INSTANCES				17000
-```
-
-Recent graphical hardwares can handle up to millions of instances.
 
 #Licence:
 
