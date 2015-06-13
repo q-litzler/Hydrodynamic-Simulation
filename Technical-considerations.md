@@ -150,4 +150,93 @@ while (!glfwWindowShouldClose(this->_window))
 
 #Algorithms and optimization
 
+**Landscape and triangle strip**
+
+A quick and easy way to represent a terrain with triangles looks like this:
+
+![](screenshots/grid.png)
+
+On each row, invert the triangles. Adding elevation on the right vertices will give you this:
+
+![](screenshots/mountain.png)
+
+But how to actually draw the triangles in an efficient way? OpenGL gives us two powerful tools to do so:
+*Triangle Strips* and *Elements*.
+
+`glDrawElements(GL_TRIANGLE_STRIP, terrainSize, GL_UNSIGNED_INT, 0);`
+
+Elements allows us to index vertices contained in the vertices buffer data, avoiding duplication of vertices.
+Triangle strips will draw a triangle between three given vertices, but will also get the last two given vertices by itself.
+This way, we only need 4 vertices and 4 elements to draw a square:
+
+![](screenshots/square.png)
+
+Assuming
+
+```
+2	3
+
+0	1
+```
+
+```
+vertices = {0,0,0, 0,0,5, 5,0,0, 5,0,5};
+elements = {0, 1, 2, 3};
+```
+
+*GL_TRIANGLE_STRIP* will consider the last two given vertices, and thus will draw the following 2 triangles:
+
+`0,1,2`
+
+`1,2,3`
+
+Lets draw a 3x3 grid with inverted triangles on each row:
+
+![](screenshots/3x3.png)
+
+Each vertices has an index from 0 to 15, meaning you can draw the entire grid with the following sequence of elements:
+
+(Use the above image and follow with your finger each point on the grid)
+
+```
+elements = {
+	0, 4, 1, 5, 2, 6, 3, 7,
+	11, 6, 10, 5, 9, 4, 8,
+	12, 9, 13, 10, 14, 11, 15
+}
+```
+
+That's 22 elements and 15 vertices in order to draw 18 different triangles.
+
+Assuming an unsigned int and a float are both worth 32 bits in your architecture, we obtain:
+
+Elements size:
+
+```
+Number of elements * sizeof(unsigned int)
+(22 * 32) = 704 bits
+```
+
+Vertices size:
+
+```
+Number of vertices * Dimensions (x, y, z) * sizeof(float)
+(15 * 3 * 32) = 1440 bits
+```
+
+For a total of 2144 bits
+
+If we drew the same grid using *GL_TRIANGLES* and no elements (meaning we would have to specify each vertices for each triangle), we get:
+
+Vertices size:
+
+```
+Number of triangles * Vertices in triangle * Dimensions (x, y, z) * sizeof(float)
+18 * 3 * 3 * 32 = 5184 bits
+```
+
+That's a whopping 58% reduction in ressources. Not bad.
+
+
+
 
