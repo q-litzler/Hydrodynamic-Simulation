@@ -26,7 +26,7 @@ During the simulation, if the scenario is not `rain`, you can press the followin
 
 `make` or `make all`
 
-Compiles and link the sources.
+Compile and link the sources.
 
 `make clean`
 
@@ -34,11 +34,11 @@ Clean object files.
 
 `make fclean`
 
-Calls *make clean* and delete binary files.
+Call *make clean* and delete binary files.
 
 `make re`
 
-Calls *make fclean* and *make all*.
+Call *make fclean* and *make all*.
 
 **Start the programm**
 
