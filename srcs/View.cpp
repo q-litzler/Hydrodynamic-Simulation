@@ -121,7 +121,6 @@ void			View::tsunami(void)
 	if (!this->_tsunami)
 	{
 		this->_model.getWater()->waves(this->_model.getTop() * TSUNAMI_COEFFICIENT);
-		std::cout << this->_model.getTop() << std::endl;
 		this->_tsunami = true;
 	}
 }
