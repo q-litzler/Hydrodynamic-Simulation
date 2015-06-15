@@ -118,4 +118,4 @@ Contains a set of maps used by the programm.
 
 #Licence:
 
-[The MIT License (MIT)](http://opensource.org/licenses/MIT)
+[The MIT License (MIT)](http://opensource.org/licenses/MIT){target:"_blank"}
