@@ -109,6 +109,7 @@ void			View::tsunami(void)
 	if (!this->_tsunami)
 	{
 		this->_model.getWater()->waves(this->_model.getTop() * TSUNAMI_COEFFICIENT);
+		std::cout << this->_model.getTop() << std::endl;
 		this->_tsunami = true;
 	}
 }
@@ -183,41 +184,41 @@ void			View::inputHandler(GLFWwindow* window, int key, int scancode, int action,
 	{
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
-	else if (key == GLFW_KEY_LEFT)
+	else if (key == GLFW_KEY_LEFT && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
 		View::_GLFW->_model.setRotation(-0.05f);
 	}
-	else if (key == GLFW_KEY_RIGHT)
+	else if (key == GLFW_KEY_RIGHT && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
 		View::_GLFW->_model.setRotation(0.05f);
 	}
-	else if (key == GLFW_KEY_UP)
+	else if (key == GLFW_KEY_UP && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
 		View::_GLFW->_camera.move(glm::vec3(0.0f, 1.0f, .0f));
 	}
-	else if (key == GLFW_KEY_DOWN)
+	else if (key == GLFW_KEY_DOWN && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
 		View::_GLFW->_camera.move(glm::vec3(0.0f, -1.0f, .0f));
 	}
-	else if (key == GLFW_KEY_EQUAL || key == GLFW_KEY_KP_ADD)
+	else if ((key == GLFW_KEY_EQUAL || key == GLFW_KEY_KP_ADD) && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
 		View::_GLFW->_model.setScaleFactor(1.1f);
 	}
-	else if (key == GLFW_KEY_MINUS || key == GLFW_KEY_KP_SUBTRACT)
+	else if ((key == GLFW_KEY_MINUS || key == GLFW_KEY_KP_SUBTRACT) && (action == GLFW_REPEAT || action == GLFW_PRESS))
 	{
 		View::_GLFW->_model.setScaleFactor(0.9f);
 	}
-	else if (key == GLFW_KEY_F && View::_GLFW->_model.getScenario() != RAIN)
+	else if (key == GLFW_KEY_F && action == GLFW_PRESS && View::_GLFW->_model.getScenario() != RAIN)
 	{
 		View::_GLFW->_model.setScenario(FLOOD);
 		View::_GLFW->_model.getWater()->createVertices();
 	}
-	else if (key == GLFW_KEY_W && View::_GLFW->_model.getScenario() != RAIN)
+	else if (key == GLFW_KEY_W && action == GLFW_PRESS && View::_GLFW->_model.getScenario() != RAIN)
 	{
 		View::_GLFW->_model.setScenario(WAVES);
 		View::_GLFW->_model.getWater()->createVertices();
 	}
-	else if (key == GLFW_KEY_D && View::_GLFW->_model.getScenario() != RAIN)
+	else if (key == GLFW_KEY_D && action == GLFW_PRESS && View::_GLFW->_model.getScenario() != RAIN)
 	{
 		View::_GLFW->_model.setScenario(DRAIN);
 	}
