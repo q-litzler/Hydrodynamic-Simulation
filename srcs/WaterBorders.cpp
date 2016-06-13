@@ -70,18 +70,22 @@ void			WaterBorders::createVertices(void)
 	for (GLuint i = 0; i < this->_model._col; ++i)
 	{
 		this->assignVertices(i * UNIT, i * DIMENSIONS + 1, 0.0f);
+		this->assignNormals(0.0f, 0.0f, 1.0f);
 	}
 	for (GLuint i = 0; i < this->_model._row; ++i)
 	{
 		this->assignVertices(this->_model._col * UNIT, (i + 1) * this->_model._vertexCol * DIMENSIONS - 2, i * UNIT);
+		this->assignNormals(-1.0f, 0.0f, 0.0f);
 	}
 	for (int i = this->_model._col; i > 0; --i)
 	{
 		this->assignVertices(i * UNIT, this->_model._vertexCol * this->_model._row * DIMENSIONS + 1 + i * DIMENSIONS, this->_model._row * UNIT);
+		this->assignNormals(0.0f, 0.0f, -1.0f);
 	}
 	for (int i = this->_model._row; i >= 0; --i)
 	{
 		this->assignVertices(0.0f, this->_model._vertexCol * DIMENSIONS * i + 1, i * UNIT);
+		this->assignNormals(1.0f, 0.0f, 0.0f);
 	}
 }
 
